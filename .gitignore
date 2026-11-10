@@ -1,0 +1,48 @@
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Archivos temporales
+*.log
+.pytest_cache/
+.cache/
+
+# Configuración privada
+.env
+.env.*
+!.env.example
+
+# Certificados y claves HTTPS
+*.pem
+*.key
+*.crt
+certs/
+
+# Entrenamientos y resultados generados
+runs/
+*.pt
+*.onnx
+
+# Dataset con imágenes personales
+dataset/images/
+dataset/labels/
+dataset/respaldo_avif/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración local del editor
+.vscode/
+.idea/
+    
+copiaseguridad/
+prueba_anonimizacion.jpg

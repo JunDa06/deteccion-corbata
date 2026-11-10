@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector Inteligente de Corbatas</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Detector Inteligente de Corbatas</h1>
+        <p>Sistema de detección mediante inteligencia artificial</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+            <h2>Panel de monitoreo</h2>
+
+            <div class="tarjetas-dashboard">
+
+                <div class="tarjeta">
+                    <h3>ESTADO DE VESTIMENTA</h3>
+                    <p id="estadoVestimenta">ESPERANDO...</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>CONFIANZA</h3>
+                    <p id="confianza">0%</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>DETECCIONES</h3>
+                    <p id="totalDetecciones">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>PRIVACIDAD</h3>
+                    <p id="estadoPrivacidad">INACTIVA</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <h2>Monitoreo de red LAN</h2>
+
+            <div class="tarjetas-dashboard">
+
+                <div class="tarjeta">
+                    <h3>ESTADO DE CONEXIÓN</h3>
+                    <p id="estadoRed">ESPERANDO...</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>LATENCIA HTTP</h3>
+                    <p id="latenciaRed">0 ms</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>ANCHO DE BANDA</h3>
+                    <p id="anchoBanda">0 Mbps</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="panel-camara">
+
+            <h2>Detección en tiempo real</h2>
+
+            <div class="contenedor-video">
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+                <canvas id="canvas"></canvas>
+
+            </div>
+
+            <div class="controles">
+
+                <button id="btnIniciar">
+                    Iniciar cámara
+                </button>
+
+                <button id="btnDetener" disabled>
+                    Detener cámara
+                </button>
+
+            </div>
+
+            <div id="estado">
+                Cámara desactivada
+            </div>
+
+            <div id="resultado">
+                Esperando detección...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Detector de Corbatas | YOLOv8 + MediaPipe + FastAPI</p>
+        <p>Procesamiento local de imágenes y protección de privacidad</p>
+    </footer>
+
+    <script src="/static/js/camara.js"></script>
+    <script src="/static/js/red.js"></script>
+
+</body>
+</html>
